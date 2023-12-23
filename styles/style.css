@@ -6,6 +6,9 @@
   --secondary-color-btn: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
   --hover-color-btn: #666CA3;
   --clear-color: #FFF;
+  --background-color-body: linear-gradient(180deg, #FFF 0%, #F0F1FF 100%);
+
+
   --primary-font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -18,6 +21,10 @@
 html {
   font-size: 62.5%;
   font-family: var(--primary-font-family);
+}
+
+body {
+  background: var(--background-color-body);
 }
 
 header {
@@ -73,12 +80,92 @@ header .get-started-tertiary-btn {
   margin: 0 16px 40px;
 }
 
-.main-saction-container .woman-img img{
+.main-saction-container .woman-img {
   width: 100%;
   height: 384px;
-  background-image: url(../assets/image-hero-mobile@2x.webp);
+  background-image: url(../assets/image-hero-mobile@2x.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
+.info-grid-container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  margin: 16px 16px 80px;
+}
+
+.info-grid-container .first-info-article {
+  width: 343px;
+  height: 120px;
+  padding: 24px;
+  font-size: 15px;
+  line-height: 32px;
+  color: var(--clear-color);
+  background: var(--primary-color-btn);
+  border-radius: 10px;
+}
+
+.info-grid-container .info-article {
+  position: relative;
+  padding: 24px;
+  background-color: var(--clear-color);
+  border-radius: 10px;
+}
+
+.info-grid-container .info-article img {
+position: absolute;
+top: -26px;
+}
+
+.info-grid-container .info-article h3 {
+  margin-top: 56px;
+  color: var(--tittle-color);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.info-grid-container .info-article p {
+  color: var(--body-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 16px 0 24px;
+}
+
+.info-grid-container .info-article button {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--get-text-color);
+  background-color: var(--clear-color);
+  border: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 120px;
+  padding: 16px;
+  background-color: var(--tittle-color);
+}
+
+footer .skilled-img {
+  width: 89px;
+  height: 35px;
+  background-image: url(../assets/logo-light.svg);
+  background-repeat: no-repeat;
+}
+
+footer .get-started-tertiary-btn {
+  width: 140px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--clear-color);
+  background: var(--secondary-color-btn);
+  border: none;
+  border-radius: 28px;
+}
